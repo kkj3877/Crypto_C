@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "aria.h": "c",
+        "stdio.h": "c",
+        "stdint.h": "c",
+        "test.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "vector": "c",
+        "iterator": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

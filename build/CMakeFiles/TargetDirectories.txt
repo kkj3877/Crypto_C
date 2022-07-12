@@ -1,0 +1,6 @@
+/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/build/CMakeFiles/program.dir
+/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/build/CMakeFiles/edit_cache.dir
+/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/build/CMakeFiles/rebuild_cache.dir
+/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/build/lib/CMakeFiles/ARIA_MODULE.dir
+/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/build/lib/CMakeFiles/edit_cache.dir
+/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/build/lib/CMakeFiles/rebuild_cache.dir
