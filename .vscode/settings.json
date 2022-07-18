@@ -4,6 +4,9 @@
     "files.associations": {
         "aria.h": "c",
         "stdlib.h": "c",
-        "block.h": "c"
+        "block.h": "c",
+        "string.h": "c",
+        "lea.h": "c",
+        "stdint.h": "c"
     }
 }
