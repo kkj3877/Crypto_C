@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.11)
 
 # 프로젝트 정보
-project(MakePractice
+project(crypto_mode_prac
     VERSION 1.0
     DESCRIPTION "ARIA"
     LANGUAGES C

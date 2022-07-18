@@ -1,5 +1,6 @@
 #include <string.h>
 #include "./../include/block.h"
+#include "./../include/crypto/lea.h"
 #include "./../include/crypto/aria.h"
 
 void block_XOR(uint8_t * dest, uint8_t * src1, uint8_t * src2)
@@ -22,20 +23,16 @@ void block_cipher(ORDER order, target_data * data)
             switch (mode)
             {
                 case ECB:
-                    if (process == ENCRYPT)
-                        operate_ECB(ARIA_encrypt, data);
-                    else
-                        operate_ECB(ARIA_decrypt, data);
+                    operate_ECB(ARIA_decrypt, data);
                     break;
                 case CBC:
                     if (process == ENCRYPT)
                         operate_CBC(ARIA_encrypt, data, ENCRYPT);
                     else
                         operate_CBC(ARIA_decrypt, data, DECRYPT);
-                        
                     break;
                 case CTR:
-
+                    operate_CTR(ARIA_encrypt, data);
                     break;
             }
     }
@@ -140,5 +137,56 @@ void operate_CBC(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
             input += BLOCK_SIZE;
             output += BLOCK_SIZE;
         }
+    }
+}
+
+void operate_CTR(CRYPTO_SYSTEM crypto, target_data * data)
+{
+    uint8_t * input;
+    uint8_t X[BLOCK_SIZE];
+    uint8_t * output;
+    uint8_t * key;
+    unsigned int key_len;
+    uint8_t ctr[BLOCK_SIZE];
+    unsigned int block_num;
+    unsigned int i, j;
+
+    // 암호화를 위한 기본 정보를 세팅한다.
+    input = data->input;
+    output = data->output;
+    key = data->key;
+    key_len = data->key_len;
+    memset(ctr, 0x00, BLOCK_SIZE);
+    
+    block_num = data->input_len / BLOCK_SIZE;
+    
+    for (i = 0; i < block_num; ++i)
+    {
+                    printf("    input text : ");
+                    for (j = 0; j < ARIA_BLOCK_SIZE; ++j) printf("%02X ", input[j]);
+                    printf("\n");
+
+        crypto(X, ctr, key, key_len);
+        block_XOR(output, input, X);
+
+                    printf("processed text : ");
+                    for (j = 0; j < ARIA_BLOCK_SIZE; ++j) printf("%02X ", output[j]);
+                    printf("\n\n");
+
+        increase_counter(ctr);
+        input += BLOCK_SIZE;
+        output += BLOCK_SIZE;
+    }
+}
+
+void increase_counter(uint8_t * ctr)
+{
+    unsigned int i;
+    for (i = BLOCK_SIZE - 1; i >= 0; --i)
+    {
+        ++ctr[i];
+        if (ctr[i] == 0x00)
+            continue;
+        break;
     }
 }

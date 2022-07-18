@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/lib
+# Install script for directory: /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

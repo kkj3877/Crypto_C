@@ -1,5 +1,5 @@
 lib/CMakeFiles/ARIA_MODULE.dir/block.c.o: \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/lib/block.c \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/lib/block.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types.h \
@@ -33,7 +33,14 @@ lib/CMakeFiles/ARIA_MODULE.dir/block.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_common.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_string.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/lib/./../include/block.h \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/lib/./../include/block.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctermid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
@@ -42,12 +49,5 @@ lib/CMakeFiles/ARIA_MODULE.dir/block.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/lib/./../include/crypto/aria.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctermid.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_stdio.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/include/crypto/./../block.h
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/lib/./../include/crypto/aria.h \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/include/crypto/./../block.h

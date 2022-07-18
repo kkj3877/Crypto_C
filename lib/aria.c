@@ -164,14 +164,6 @@ void ARIA_decrypt(uint8_t * output, uint8_t * input, uint8_t * key, unsigned int
     ARIA_XOR(output, state, rk + ARIA_BLOCK_SIZE * nr);
 
                         // printf("%d round : ", nr); for (j = 0; j < ARIA_BLOCK_SIZE; ++j) printf("%02X ", cipher_text[j]); printf("\n\n");
-
-                        // printf("   cipher text : ");
-                        // for (i = 0; i < ARIA_BLOCK_SIZE; ++i) printf("%02X ", input[i]);
-                        // printf("\n");
-
-                        // printf("decrypted text : ");
-                        // for (i = 0; i < ARIA_BLOCK_SIZE; ++i) printf("%02X ", output[i]);
-                        // printf("\n\n");
 }
 
 void ARIA_init(aria_context * context)

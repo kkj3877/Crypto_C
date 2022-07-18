@@ -1,8 +1,6 @@
 #ifndef _ARIA_H_
 #define _ARIA_H_
 
-#include <stdint.h>
-#include <stdio.h>
 #include "./../block.h"
 
 #define ARIA_BLOCK_SIZE 16

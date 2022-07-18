@@ -1,6 +1,7 @@
 #ifndef _BLOCK_H_
 #define _BLOCK_H_
 
+#include <stdio.h>
 #include <stdint.h>
 
 //////////////////// BLOCK CONSTANT ////////////////////
@@ -46,5 +47,9 @@ void block_cipher(ORDER MODE, target_data * data);
 void operate_ECB(CRYPTO_SYSTEM crypto, target_data * data);
 
 void operate_CBC(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec);
+
+void operate_CTR(CRYPTO_SYSTEM crypto, target_data * data);
+
+void increase_counter(uint8_t * ctr);
 
 #endif

@@ -2,6 +2,7 @@
 
 # 동적 라이브러리 ARIA_MODULE 을 만든다.
 add_library(ARIA_MODULE SHARED
+    lea.c
     aria.c
     block.c
 )

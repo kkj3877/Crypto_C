@@ -4,7 +4,7 @@
 # compile C with /Library/Developer/CommandLineTools/usr/bin/cc
 C_DEFINES = -DARIA_MODULE_EXPORTS
 
-C_INCLUDES = -I/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/include -I/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/ARIA/include/crypto
+C_INCLUDES = -I/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/include -I/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/include/crypto
 
 C_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
 
