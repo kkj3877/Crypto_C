@@ -14,4 +14,4 @@ then
     exit 1
 fi
 
-./test/test_aria
+./test/test_lea

@@ -202,6 +202,30 @@ lea.c.s:
 	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.s
 .PHONY : lea.c.s
 
+test.o: test.c.o
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.s
+.PHONY : test.c.s
+
 util.o: util.c.o
 .PHONY : util.o
 
@@ -244,6 +268,9 @@ help:
 	@echo "... lea.o"
 	@echo "... lea.i"
 	@echo "... lea.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"

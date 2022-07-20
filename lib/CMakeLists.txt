@@ -6,6 +6,7 @@ add_library(CRYPTO_MODULE SHARED
     aria.c
     block.c
     util.c
+    test.c
 )
 
 # 해당 라이브러리 컴파일 시 사용할 헤더파일 경로

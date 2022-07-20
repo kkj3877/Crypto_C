@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CRYPTO_MODULE.dir/block.c.o.d"
   "CMakeFiles/CRYPTO_MODULE.dir/lea.c.o"
   "CMakeFiles/CRYPTO_MODULE.dir/lea.c.o.d"
+  "CMakeFiles/CRYPTO_MODULE.dir/test.c.o"
+  "CMakeFiles/CRYPTO_MODULE.dir/test.c.o.d"
   "CMakeFiles/CRYPTO_MODULE.dir/util.c.o"
   "CMakeFiles/CRYPTO_MODULE.dir/util.c.o.d"
   "libCRYPTO_MODULE.dylib"

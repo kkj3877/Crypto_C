@@ -5,6 +5,9 @@
 #include "./block.h"
 #include "./util.h"
 
+void data_init(target_data * data, unsigned int data_len, unsigned int key_len, unsigned int iv_len);
+void data_free(target_data * data);
+
 // ARIA TEST
 void test_ARIA_128(void);
 void test_ARIA_128_ECB(target_data * data_enc, target_data * data_dec);
