@@ -8,25 +8,18 @@ project(crypto_mode_prac
     LANGUAGES C
 )
 
-add_executable(program
-    ./test/test.c
-)
-
-add_dependencies(program
-    ARIA_MODULE
-)
-
 # 확인할 디렉토리 추가
 add_subdirectory(lib)
+add_subdirectory(test)
 
 # target_include_directories(program PUBLIC
 #     ${CMAKE_SOURCE_DIR}/include
 # )
 
-target_compile_options(program PUBLIC
-    -Wall
-)
+# target_compile_options(program PUBLIC
+#     -Wall
+# )
 
-target_link_libraries(program
-    ARIA_MODULE
-)
+# target_link_libraries(program
+#     ARIA_MODULE
+# )

@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.23.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.23.2/CMakeSystem.cmake"
   "../lib/CMakeLists.txt"
+  "../test/CMakeLists.txt"
   "/usr/local/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/local/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeGenericSystem.cmake"
@@ -40,10 +41,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/program.dir/DependInfo.cmake"
-  "lib/CMakeFiles/ARIA_MODULE.dir/DependInfo.cmake"
+  "lib/CMakeFiles/CRYPTO_MODULE.dir/DependInfo.cmake"
+  "test/CMakeFiles/test_aria.dir/DependInfo.cmake"
+  "test/CMakeFiles/test_lea.dir/DependInfo.cmake"
   )
