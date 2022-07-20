@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode
+# Install script for directory: /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/lib/cmake_install.cmake")
-  include("/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/test/cmake_install.cmake")
+  include("/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib/cmake_install.cmake")
+  include("/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/test/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

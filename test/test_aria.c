@@ -12,6 +12,12 @@ int main(void)
 
 void test_ARIA_128(void)
 {
+    unsigned int key_len = 16;
+    unsigned char * test_ARIA_128_key_str = (unsigned char *)"00112233445566778899aabbccddeeff";
+
+    unsigned int iv_len = 16;
+    unsigned char * test_ARIA_128_iv_str = (unsigned char *)"0f1e2d3c4b5a69788796a5b4c3d2e1f0";
+
     printf("\n\n");
     printf("\t==================================================\n");
     printf("\t==================| ARIA - 128 |==================\n");
@@ -19,14 +25,13 @@ void test_ARIA_128(void)
 
     target_data data_enc;
     target_data data_dec;
-    uint8_t key[16] = {
-        0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77,
-        0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff
-    };
-    uint8_t iv[16] = {
-        0x0f, 0x1e, 0x2d, 0x3c, 0x4b, 0x5a, 0x69, 0x78,
-        0x87, 0x96, 0xa5, 0xb4, 0xc3, 0xd2, 0xe1, 0xf0
-    };
+
+    uint8_t * key = (uint8_t *)calloc(key_len, sizeof(uint8_t));
+    string_to_hex_array(key, key_len * 2, test_ARIA_128_key_str);
+
+    uint8_t * iv = (uint8_t *)calloc(ARIA_BLOCK_SIZE, sizeof(uint8_t));
+    string_to_hex_array(iv, ARIA_BLOCK_SIZE * 2, test_ARIA_128_iv_str);
+
     uint8_t plain_text[ARIA_BLOCK_SIZE * 10] = {
         0x11 ,0x11 ,0x11 ,0x11 ,0xaa ,0xaa ,0xaa ,0xaa ,0x11 ,0x11 ,0x11 ,0x11 ,0xbb ,0xbb ,0xbb ,0xbb,
         0x11 ,0x11 ,0x11 ,0x11 ,0xcc ,0xcc ,0xcc ,0xcc ,0x11 ,0x11 ,0x11 ,0x11 ,0xdd ,0xdd ,0xdd ,0xdd,
@@ -48,22 +53,25 @@ void test_ARIA_128(void)
     data_dec.output = decrypted_text;
 
     data_dec.key = data_enc.key = key;
-    data_dec.key_len = data_enc.key_len = 16;
+    data_dec.key_len = data_enc.key_len = key_len;
 
     data_dec.iv = data_enc.iv = iv;
-    data_dec.iv_len = data_enc.iv_len = 16;
+    data_dec.iv_len = data_enc.iv_len = iv_len;
 
     // ECB MODE
     test_ARIA_128_ECB(&data_enc, &data_dec);
     
     // CBC MODE
-    // test_ARIA_128_CBC(&data_enc, &data_dec);
+    test_ARIA_128_CBC(&data_enc, &data_dec);
 
     // CFB MODE
     test_ARIA_128_CFB(&data_enc, &data_dec);
 
+    // OFB MODE
+    test_ARIA_128_OFB(&data_enc, &data_dec);
+
     // CTR MODE
-    // test_ARIA_128_CTR(&data_enc, &data_dec);
+    test_ARIA_128_CTR(&data_enc, &data_dec);
 }
 
 void test_ARIA_128_ECB(target_data * data_enc, target_data * data_dec)
@@ -137,18 +145,10 @@ void test_ARIA_128_CBC(target_data * data_enc, target_data * data_dec)
 
 void test_ARIA_128_CFB(target_data * data_enc, target_data * data_dec)
 {
-    uint8_t cipher_text[ARIA_BLOCK_SIZE * 10] = {
-        0x37,0x20,0xe5,0x3b,0xa7,0xd6,0x15,0x38,0x34,0x06,0xb0,0x9f,0x0a,0x05,0xa2,0x00,
-        0xc0,0x7c,0x21,0xe6,0x37,0x0f,0x41,0x3a,0x5d,0x13,0x25,0x00,0xa6,0x82,0x85,0x01,
-        0x7c,0x61,0xb4,0x34,0xc7,0xb7,0xca,0x96,0x85,0xa5,0x10,0x71,0x86,0x1e,0x4d,0x4b,
-        0xb8,0x73,0xb5,0x99,0xb4,0x79,0xe2,0xd5,0x73,0xdd,0xde,0xaf,0xba,0x89,0xf8,0x12,
-        0xac,0x6a,0x9e,0x44,0xd5,0x54,0x07,0x8e,0xb3,0xbe,0x94,0x83,0x9d,0xb4,0xb3,0x3d,
-        0xa3,0xf5,0x9c,0x06,0x31,0x23,0xa7,0xef,0x6f,0x20,0xe1,0x05,0x79,0xfa,0x4f,0xd2,
-        0x39,0x10,0x0c,0xa7,0x3b,0x52,0xd4,0xfc,0xaf,0xea,0xde,0xe7,0x3f,0x13,0x9f,0x78,
-        0xf9,0xb7,0x61,0x4c,0x2b,0x3b,0x9d,0xbe,0x01,0x0f,0x87,0xdb,0x06,0xa8,0x9a,0x94,
-        0x35,0xf7,0x9c,0xe8,0x12,0x14,0x31,0x37,0x1f,0x4e,0x87,0xb9,0x84,0xe0,0x23,0x0c,
-        0x22,0xa6,0xda,0xcb,0x32,0xfc,0x42,0xdc,0xc6,0xac,0xce,0xf3,0x32,0x85,0xbf,0x11
-    };
+    unsigned char * cipher_string =
+        (unsigned char *)"3720e53ba7d615383406b09f0a05a200c07c21e6370f413a5d132500a68285017c61b434c7b7ca9685a51071861e4d4bb873b599b479e2d573dddeafba89f812ac6a9e44d554078eb3be94839db4b33da3f59c063123a7ef6f20e10579fa4fd239100ca73b52d4fcafeadee73f139f78f9b7614c2b3b9dbe010f87db06a89a9435f79ce8121431371f4e87b984e0230c22a6dacb32fc42dcc6accef33285bf11";
+    uint8_t * cipher_text = (uint8_t *)calloc(ARIA_BLOCK_SIZE * 10, sizeof(uint8_t));
+    string_to_hex_array(cipher_text, ARIA_BLOCK_SIZE * 20, cipher_string);
 
     printf("\n\n");
     printf("\t==================================================\n");
@@ -164,6 +164,29 @@ void test_ARIA_128_CFB(target_data * data_enc, target_data * data_dec)
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
     block_cipher(ARIA|DECRYPT|CFB, data_dec);
+}
+
+void test_ARIA_128_OFB(target_data * data_enc, target_data * data_dec)
+{
+    unsigned char * cipher_string =
+        (unsigned char *)"3720e53ba7d615383406b09f0a05a2000063063f0560083483faeb041c8adecef30cf80cefb002a0d280759168ec01db3d49f61aced260bd43eec0a2731730eec6fa4f2304319cf8ccac2d7be7833e4f8ae6ce967012c1c6badc5d28e7e4144f6bf5cebe01253ee202afce4bc61f28dec069a6f16f6c8a7dd2afae44148f6ff4d0029d5c607b5fa6b8c8a6301cde5c7033565cd0b8f0974ab490b236197ba04a";
+    uint8_t * cipher_text = (uint8_t *)calloc(ARIA_BLOCK_SIZE * 10, sizeof(uint8_t));
+    string_to_hex_array(cipher_text, ARIA_BLOCK_SIZE * 20, cipher_string);
+
+    printf("\n\n");
+    printf("\t==================================================\n");
+    printf("\t===============| ARIA - 128 - OFB |===============\n");
+    printf("\t==================================================\n");
+
+    data_dec->input = cipher_text;
+
+                        printf("==================================================\n");
+                        printf(">>>> Encrypt Process start\n");
+    block_cipher(ARIA|ENCRYPT|OFB, data_enc);
+
+                        printf("==================================================\n");
+                        printf(">>>> Decrypt Process start\n");
+    block_cipher(ARIA|DECRYPT|OFB, data_dec);
 }
 
 void test_ARIA_128_CTR(target_data * data_enc, target_data * data_dec)
@@ -190,11 +213,11 @@ void test_ARIA_128_CTR(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_CTR, data_enc);
+    block_cipher(ARIA|ENCRYPT|CTR, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_CTR, data_dec);
+    block_cipher(ARIA|DECRYPT|CTR, data_dec);
 }
 
 
@@ -270,11 +293,11 @@ void test_ARIA_192_ECB(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_ECB, data_enc);
+    block_cipher(ARIA|ENCRYPT|ECB, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_ECB, data_dec);
+    block_cipher(ARIA|DECRYPT|ECB, data_dec);
 }
 
 void test_ARIA_192_CBC(target_data * data_enc, target_data * data_dec)
@@ -301,11 +324,11 @@ void test_ARIA_192_CBC(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_CBC, data_enc);
+    block_cipher(ARIA|ENCRYPT|CBC, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_CBC, data_dec);
+    block_cipher(ARIA|DECRYPT|CBC, data_dec);
 }
 
 void test_ARIA_192_CTR(target_data * data_enc, target_data * data_dec)
@@ -332,11 +355,11 @@ void test_ARIA_192_CTR(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_CTR, data_enc);
+    block_cipher(ARIA|ENCRYPT|CTR, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_CTR, data_dec);
+    block_cipher(ARIA|DECRYPT|CTR, data_dec);
 }
 
 
@@ -413,11 +436,11 @@ void test_ARIA_256_ECB(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_ECB, data_enc);
+    block_cipher(ARIA|ENCRYPT|ECB, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_ECB, data_dec);
+    block_cipher(ARIA|DECRYPT|ECB, data_dec);
 }
 
 void test_ARIA_256_CBC(target_data * data_enc, target_data * data_dec)
@@ -444,11 +467,11 @@ void test_ARIA_256_CBC(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_CBC, data_enc);
+    block_cipher(ARIA|ENCRYPT|CBC, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_CBC, data_dec);
+    block_cipher(ARIA|DECRYPT|CBC, data_dec);
 }
 
 void test_ARIA_256_CTR(target_data * data_enc, target_data * data_dec)
@@ -475,10 +498,10 @@ void test_ARIA_256_CTR(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(ARIA_ENC_CTR, data_enc);
+    block_cipher(ARIA|ENCRYPT|CTR, data_enc);
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(ARIA_DEC_CTR, data_dec);
+    block_cipher(ARIA|DECRYPT|CTR, data_dec);
 }
 

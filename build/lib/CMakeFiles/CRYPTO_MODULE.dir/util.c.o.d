@@ -1,6 +1,6 @@
 lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o: \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/lib/util.c \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/include/util.h \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/util.c \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/util.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int8_t.h \

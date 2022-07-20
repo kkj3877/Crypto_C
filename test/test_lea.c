@@ -116,7 +116,7 @@ void test_LEA_128_ECB(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Encrypt Process start\n");
-    block_cipher(LEA_ENC_ECB, data_enc);
+    block_cipher(LEA|ENCRYPT|ECB, data_enc);
 
     printf(">> key >>");
     for (unsigned int i = 0; i < 16; ++i)
@@ -127,7 +127,7 @@ void test_LEA_128_ECB(target_data * data_enc, target_data * data_dec)
 
                         printf("==================================================\n");
                         printf(">>>> Decrypt Process start\n");
-    block_cipher(LEA_DEC_ECB, data_dec);
+    block_cipher(LEA|DECRYPT|ECB, data_dec);
 }
 
 // void test_LEA_128_CBC(target_data * data_enc, target_data * data_dec)
