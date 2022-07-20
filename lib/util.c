@@ -2,10 +2,9 @@
 
 int get_num(unsigned char ch)
 {
-	int num = 0;
 	if (ch >= '0' && ch <= '9')
 	{
-		num = ch - 0x30;
+		return ch - 0x30;
 	}
 	else
 	{
@@ -13,33 +12,32 @@ int get_num(unsigned char ch)
 		{
 		case 'A':
 		case 'a':
-			num = 10;
+			return 10;
 			break;
 		case 'B':
 		case 'b':
-			num = 11;
+			return 11;
 			break;
 		case 'C':
 		case 'c':
-			num = 12;
+			return 12;
 			break;
 		case 'D':
 		case 'd':
-			num = 13;
+			return 13;
 			break;
 		case 'E':
 		case 'e':
-			num = 14;
+			return 14;
 			break;
 		case 'F':
 		case 'f':
-			num = 15;
+			return 15;
 			break;
 		default:
-			num = 0;
+			return 0;
 		}
 	}
-	return num;
 }
 
 int string_to_hex_array(uint8_t * hex_array, unsigned int str_len, unsigned char * string)
