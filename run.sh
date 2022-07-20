@@ -14,4 +14,4 @@ then
     exit 1
 fi
 
-./program
+./test/test_aria

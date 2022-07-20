@@ -117,54 +117,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named program
+# Target rules for targets named CRYPTO_MODULE
 
 # Build rule for target.
-program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program
-.PHONY : program
+CRYPTO_MODULE: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CRYPTO_MODULE
+.PHONY : CRYPTO_MODULE
 
 # fast build rule for target.
-program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
-.PHONY : program/fast
+CRYPTO_MODULE/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/build
+.PHONY : CRYPTO_MODULE/fast
 
 #=============================================================================
-# Target rules for targets named ARIA_MODULE
+# Target rules for targets named test_aria
 
 # Build rule for target.
-ARIA_MODULE: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ARIA_MODULE
-.PHONY : ARIA_MODULE
+test_aria: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_aria
+.PHONY : test_aria
 
 # fast build rule for target.
-ARIA_MODULE/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/build
-.PHONY : ARIA_MODULE/fast
+test_aria/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_aria.dir/build.make test/CMakeFiles/test_aria.dir/build
+.PHONY : test_aria/fast
 
-test/test.o: test/test.c.o
-.PHONY : test/test.o
+#=============================================================================
+# Target rules for targets named test_lea
 
-# target to build an object file
-test/test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/test/test.c.o
-.PHONY : test/test.c.o
+# Build rule for target.
+test_lea: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_lea
+.PHONY : test_lea
 
-test/test.i: test/test.c.i
-.PHONY : test/test.i
-
-# target to preprocess a source file
-test/test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/test/test.c.i
-.PHONY : test/test.c.i
-
-test/test.s: test/test.c.s
-.PHONY : test/test.s
-
-# target to generate assembly for a file
-test/test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/test/test.c.s
-.PHONY : test/test.c.s
+# fast build rule for target.
+test_lea/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_lea.dir/build.make test/CMakeFiles/test_lea.dir/build
+.PHONY : test_lea/fast
 
 # Help Target
 help:
@@ -174,11 +163,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ARIA_MODULE"
-	@echo "... program"
-	@echo "... test/test.o"
-	@echo "... test/test.i"
-	@echo "... test/test.s"
+	@echo "... CRYPTO_MODULE"
+	@echo "... test_aria"
+	@echo "... test_lea"
 .PHONY : help
 
 

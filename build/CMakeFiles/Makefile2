@@ -63,24 +63,25 @@ CMAKE_BINARY_DIR = /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_M
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/program.dir/all
 all: lib/all
+all: test/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: lib/preinstall
+preinstall: test/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/program.dir/clean
 clean: lib/clean
+clean: test/clean
 .PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory lib
 
 # Recursive "all" directory target.
-lib/all: lib/CMakeFiles/ARIA_MODULE.dir/all
+lib/all: lib/CMakeFiles/CRYPTO_MODULE.dir/all
 .PHONY : lib/all
 
 # Recursive "preinstall" directory target.
@@ -88,60 +89,103 @@ lib/preinstall:
 .PHONY : lib/preinstall
 
 # Recursive "clean" directory target.
-lib/clean: lib/CMakeFiles/ARIA_MODULE.dir/clean
+lib/clean: lib/CMakeFiles/CRYPTO_MODULE.dir/clean
 .PHONY : lib/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/program.dir
+# Directory level rules for directory test
 
-# All Build rule for target.
-CMakeFiles/program.dir/all: lib/CMakeFiles/ARIA_MODULE.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles --progress-num=5,6 "Built target program"
-.PHONY : CMakeFiles/program.dir/all
+# Recursive "all" directory target.
+test/all: test/CMakeFiles/test_aria.dir/all
+test/all: test/CMakeFiles/test_lea.dir/all
+.PHONY : test/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/program.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/program.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 0
-.PHONY : CMakeFiles/program.dir/rule
+# Recursive "preinstall" directory target.
+test/preinstall:
+.PHONY : test/preinstall
 
-# Convenience name for target.
-program: CMakeFiles/program.dir/rule
-.PHONY : program
-
-# clean rule for target.
-CMakeFiles/program.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/clean
-.PHONY : CMakeFiles/program.dir/clean
+# Recursive "clean" directory target.
+test/clean: test/CMakeFiles/test_aria.dir/clean
+test/clean: test/CMakeFiles/test_lea.dir/clean
+.PHONY : test/clean
 
 #=============================================================================
-# Target rules for target lib/CMakeFiles/ARIA_MODULE.dir
+# Target rules for target lib/CMakeFiles/CRYPTO_MODULE.dir
 
 # All Build rule for target.
-lib/CMakeFiles/ARIA_MODULE.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles --progress-num=1,2,3,4 "Built target ARIA_MODULE"
-.PHONY : lib/CMakeFiles/ARIA_MODULE.dir/all
+lib/CMakeFiles/CRYPTO_MODULE.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target CRYPTO_MODULE"
+.PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/all
 
 # Build rule for subdir invocation for target.
-lib/CMakeFiles/ARIA_MODULE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/ARIA_MODULE.dir/all
+lib/CMakeFiles/CRYPTO_MODULE.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/CRYPTO_MODULE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 0
-.PHONY : lib/CMakeFiles/ARIA_MODULE.dir/rule
+.PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/rule
 
 # Convenience name for target.
-ARIA_MODULE: lib/CMakeFiles/ARIA_MODULE.dir/rule
-.PHONY : ARIA_MODULE
+CRYPTO_MODULE: lib/CMakeFiles/CRYPTO_MODULE.dir/rule
+.PHONY : CRYPTO_MODULE
 
 # clean rule for target.
-lib/CMakeFiles/ARIA_MODULE.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/clean
-.PHONY : lib/CMakeFiles/ARIA_MODULE.dir/clean
+lib/CMakeFiles/CRYPTO_MODULE.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/clean
+.PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/test_aria.dir
+
+# All Build rule for target.
+test/CMakeFiles/test_aria.dir/all: lib/CMakeFiles/CRYPTO_MODULE.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_aria.dir/build.make test/CMakeFiles/test_aria.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_aria.dir/build.make test/CMakeFiles/test_aria.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles --progress-num=6,7 "Built target test_aria"
+.PHONY : test/CMakeFiles/test_aria.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/test_aria.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/test_aria.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/test_aria.dir/rule
+
+# Convenience name for target.
+test_aria: test/CMakeFiles/test_aria.dir/rule
+.PHONY : test_aria
+
+# clean rule for target.
+test/CMakeFiles/test_aria.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_aria.dir/build.make test/CMakeFiles/test_aria.dir/clean
+.PHONY : test/CMakeFiles/test_aria.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/test_lea.dir
+
+# All Build rule for target.
+test/CMakeFiles/test_lea.dir/all: lib/CMakeFiles/CRYPTO_MODULE.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_lea.dir/build.make test/CMakeFiles/test_lea.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_lea.dir/build.make test/CMakeFiles/test_lea.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles --progress-num=8,9 "Built target test_lea"
+.PHONY : test/CMakeFiles/test_lea.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/test_lea.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/test_lea.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/test_lea.dir/rule
+
+# Convenience name for target.
+test_lea: test/CMakeFiles/test_lea.dir/rule
+.PHONY : test_lea
+
+# clean rule for target.
+test/CMakeFiles/test_lea.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_lea.dir/build.make test/CMakeFiles/test_lea.dir/clean
+.PHONY : test/CMakeFiles/test_lea.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

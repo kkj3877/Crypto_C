@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libARIA_MODULE.dylib -install_name @rpath/libARIA_MODULE.dylib CMakeFiles/ARIA_MODULE.dir/lea.c.o CMakeFiles/ARIA_MODULE.dir/aria.c.o CMakeFiles/ARIA_MODULE.dir/block.c.o 

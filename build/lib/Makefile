@@ -117,25 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/CMakeFiles/ARIA_MODULE.dir/rule:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/ARIA_MODULE.dir/rule
-.PHONY : lib/CMakeFiles/ARIA_MODULE.dir/rule
+lib/CMakeFiles/CRYPTO_MODULE.dir/rule:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/CRYPTO_MODULE.dir/rule
+.PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/rule
 
 # Convenience name for target.
-ARIA_MODULE: lib/CMakeFiles/ARIA_MODULE.dir/rule
-.PHONY : ARIA_MODULE
+CRYPTO_MODULE: lib/CMakeFiles/CRYPTO_MODULE.dir/rule
+.PHONY : CRYPTO_MODULE
 
 # fast build rule for target.
-ARIA_MODULE/fast:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/build
-.PHONY : ARIA_MODULE/fast
+CRYPTO_MODULE/fast:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/build
+.PHONY : CRYPTO_MODULE/fast
 
 aria.o: aria.c.o
 .PHONY : aria.o
 
 # target to build an object file
 aria.c.o:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/aria.c.o
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o
 .PHONY : aria.c.o
 
 aria.i: aria.c.i
@@ -143,7 +143,7 @@ aria.i: aria.c.i
 
 # target to preprocess a source file
 aria.c.i:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/aria.c.i
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.i
 .PHONY : aria.c.i
 
 aria.s: aria.c.s
@@ -151,7 +151,7 @@ aria.s: aria.c.s
 
 # target to generate assembly for a file
 aria.c.s:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/aria.c.s
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.s
 .PHONY : aria.c.s
 
 block.o: block.c.o
@@ -159,7 +159,7 @@ block.o: block.c.o
 
 # target to build an object file
 block.c.o:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/block.c.o
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o
 .PHONY : block.c.o
 
 block.i: block.c.i
@@ -167,7 +167,7 @@ block.i: block.c.i
 
 # target to preprocess a source file
 block.c.i:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/block.c.i
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.i
 .PHONY : block.c.i
 
 block.s: block.c.s
@@ -175,7 +175,7 @@ block.s: block.c.s
 
 # target to generate assembly for a file
 block.c.s:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/block.c.s
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.s
 .PHONY : block.c.s
 
 lea.o: lea.c.o
@@ -183,7 +183,7 @@ lea.o: lea.c.o
 
 # target to build an object file
 lea.c.o:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/lea.c.o
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o
 .PHONY : lea.c.o
 
 lea.i: lea.c.i
@@ -191,7 +191,7 @@ lea.i: lea.c.i
 
 # target to preprocess a source file
 lea.c.i:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/lea.c.i
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.i
 .PHONY : lea.c.i
 
 lea.s: lea.c.s
@@ -199,8 +199,32 @@ lea.s: lea.c.s
 
 # target to generate assembly for a file
 lea.c.s:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/ARIA_MODULE.dir/build.make lib/CMakeFiles/ARIA_MODULE.dir/lea.c.s
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.s
 .PHONY : lea.c.s
+
+util.o: util.c.o
+.PHONY : util.o
+
+# target to build an object file
+util.c.o:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o
+.PHONY : util.c.o
+
+util.i: util.c.i
+.PHONY : util.i
+
+# target to preprocess a source file
+util.c.i:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.i
+.PHONY : util.c.i
+
+util.s: util.c.s
+.PHONY : util.s
+
+# target to generate assembly for a file
+util.c.s:
+	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/Crypto_Mode/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/CRYPTO_MODULE.dir/build.make lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.s
+.PHONY : util.c.s
 
 # Help Target
 help:
@@ -210,7 +234,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ARIA_MODULE"
+	@echo "... CRYPTO_MODULE"
 	@echo "... aria.o"
 	@echo "... aria.i"
 	@echo "... aria.s"
@@ -220,6 +244,9 @@ help:
 	@echo "... lea.o"
 	@echo "... lea.i"
 	@echo "... lea.s"
+	@echo "... util.o"
+	@echo "... util.i"
+	@echo "... util.s"
 .PHONY : help
 
 
