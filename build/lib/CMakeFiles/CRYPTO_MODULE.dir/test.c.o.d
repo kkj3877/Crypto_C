@@ -1,6 +1,6 @@
-test/CMakeFiles/test_lea.dir/test_lea.c.o: \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/test_lea.c \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/./../include/test.h \
+lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o: \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/test.c \
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/test.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h \
@@ -75,6 +75,4 @@ test/CMakeFiles/test_lea.dir/test_lea.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_common.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/./util.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/./../include/crypto/lea.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/crypto/./../block.h
+  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/./util.h

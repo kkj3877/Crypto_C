@@ -72,6 +72,9 @@ void test_ARIA_128(void)
 
     // CTR MODE
     test_ARIA_128_CTR(&data_enc, &data_dec);
+
+    free(iv);
+    free(key);
 }
 
 void test_ARIA_128_ECB(target_data * data_enc, target_data * data_dec)

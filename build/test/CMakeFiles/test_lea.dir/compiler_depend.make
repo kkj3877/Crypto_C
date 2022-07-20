@@ -78,7 +78,6 @@ test/CMakeFiles/test_lea.dir/test_lea.c.o: ../test/test_lea.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_common.h \
   ../include/util.h \
-  ../include/block.h \
   ../include/crypto/lea.h \
   ../include/block.h
 

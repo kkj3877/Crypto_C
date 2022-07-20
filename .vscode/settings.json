@@ -10,7 +10,9 @@
         "vector": "c",
         "iterator": "c",
         "ratio": "c",
-        "util.h": "c"
+        "util.h": "c",
+        "lea.h": "c",
+        "stdlib.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
