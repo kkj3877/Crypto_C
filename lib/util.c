@@ -1,5 +1,18 @@
 #include "util.h"
 
+unsigned int compare_vector(uint8_t * v1, uint8_t * v2, unsigned int len)
+{
+	unsigned int i;
+
+	for (i = 0; i < len ; ++i)
+	{
+		if (v1[i] != v2[i])
+			return 0;
+	}
+
+	return 1;
+}
+
 int get_num(unsigned char ch)
 {
 	if (ch >= '0' && ch <= '9')

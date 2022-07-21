@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 
+unsigned int compare_vector(uint8_t * v1, uint8_t * v2, unsigned int len);
+
 int get_num(unsigned char ch);
 int string_to_hex_array(uint8_t * hex_array, unsigned int in_str_len, unsigned char * string);
 
