@@ -72,38 +72,59 @@ void test_LEA_128_ECB(target_data * data_enc, target_data * data_dec)
 {
     unsigned int key_len = 16;
 
+    uint8_t * answer;
+
     unsigned char * plain_text_str = (unsigned char *)"158B43008F3F065FB349C4CDB69BFCD7BD5799D19F84D224ED064FE830CD8DB6";
     unsigned char * encrypt_key_str = (unsigned char *)"7AEC775F7D4F493F1EF020CD7BFEBFD0";
+    unsigned char * encrypt_answer = (unsigned char *)"8D5A5B9B4D26A9F335BBA930E7D6E983BE0E880A3AE4A6E6DAA8720F1B25C940";
 
     unsigned char * encrypted_text_str = (unsigned char *)"F4955B65D3DA210A6287AE0F056D48B4A989CAF4F4BF8EE3770D76A60F872D17";
     unsigned char * decrypt_key_str = (unsigned char *)"9AC4A3A3B967F62FC47681A74E431C17";
+    unsigned char * decrypt_answer = (unsigned char *)"8161DBCEC0B8D8118BD83211A38E551A6FB57C0C9F4F750F0FD5A483EECB4B36";
 
     printf("\n\n");
     printf("\t==================================================\n");
     printf("\t===============| LEA - 128 - ECB |===============\n");
     printf("\t==================================================\n");
 
+    answer = (uint8_t *)calloc(data_enc->input_len, sizeof(uint8_t));
+
+    printf("==================================================\n");
+                        printf(">>>> Encrypt Process start\n");
+
     string_to_hex_array(data_enc->input, data_enc->input_len * 2, plain_text_str);
     string_to_hex_array(data_enc->key, data_enc->key_len * 2, encrypt_key_str);
 
+    block_cipher(LEA|ENCRYPT|ECB, data_enc);
+
+                        // printf("input len = %d\n", data_enc->input_len);
+                        // for (unsigned int i = 0; i < data_enc->input_len; ++i)
+                        //     printf("%02X ", data_enc->output[i]);
+                        // printf("\n");
+
+    string_to_hex_array(answer, data_enc->input_len * 2, encrypt_answer);
+    if (compare_vector(data_enc->output, answer, data_enc->input_len))
+        printf(">> PROCESS SUCCESSED\n");
+    else
+        printf(">> PROCESS FAILED\n");
+    
+                        printf("==================================================\n");
+                        printf(">>>> Decrypt Process start\n");
+    
     string_to_hex_array(data_dec->input, data_dec->input_len * 2, encrypted_text_str);
     string_to_hex_array(data_dec->key, data_dec->key_len * 2, decrypt_key_str);
 
-
-                        printf("==================================================\n");
-                        printf(">>>> Encrypt Process start\n");
-    block_cipher(LEA|ENCRYPT|ECB, data_enc);
-
-    printf(">> key >>");
-    for (unsigned int i = 0; i < 16; ++i)
-    {
-        printf("%02X ", data_dec->key[i]);
-    }
     printf("\n");
 
-                        printf("==================================================\n");
-                        printf(">>>> Decrypt Process start\n");
     block_cipher(LEA|DECRYPT|ECB, data_dec);
+
+    string_to_hex_array(answer, data_dec->input_len * 2, decrypt_answer);
+    if (compare_vector(data_dec->output, answer, data_dec->input_len))
+        printf(">> PROCESS SUCCESSED\n");
+    else
+        printf(">> PROCESS FAILED\n");
+
+    free(answer);
 }
 
 // void test_LEA_128_CBC(target_data * data_enc, target_data * data_dec)
