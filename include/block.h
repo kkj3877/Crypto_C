@@ -72,7 +72,7 @@ void operate_CBC(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec);
 
 void operate_CFB(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec);
 
-void operate_OFB(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec);
+void operate_OFB(CRYPTO_SYSTEM crypto, target_data * data);
 
 void operate_CTR(CRYPTO_SYSTEM crypto, target_data * data);
 

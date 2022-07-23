@@ -32,6 +32,23 @@ void test_LEA_ONE(void);
 
 void test_LEA_128(void);
 void test_LEA_128_ECB(target_data * data_enc, target_data * data_dec);
+void test_LEA_128_CBC(target_data * data_enc, target_data * data_dec);
+void test_LEA_128_CFB(target_data * data_enc, target_data * data_dec);
+void test_LEA_128_OFB(target_data * data_enc, target_data * data_dec);
+void test_LEA_128_CTR(target_data * data_enc, target_data * data_dec);
 
+void test_LEA_192(void);
+void test_LEA_192_ECB(target_data * data_enc, target_data * data_dec);
+void test_LEA_192_CBC(target_data * data_enc, target_data * data_dec);
+void test_LEA_192_CFB(target_data * data_enc, target_data * data_dec);
+void test_LEA_192_OFB(target_data * data_enc, target_data * data_dec);
+void test_LEA_192_CTR(target_data * data_enc, target_data * data_dec);
+
+void test_LEA_256(void);
+void test_LEA_256_ECB(target_data * data_enc, target_data * data_dec);
+void test_LEA_256_CBC(target_data * data_enc, target_data * data_dec);
+void test_LEA_256_CFB(target_data * data_enc, target_data * data_dec);
+void test_LEA_256_OFB(target_data * data_enc, target_data * data_dec);
+void test_LEA_256_CTR(target_data * data_enc, target_data * data_dec);
 
 #endif

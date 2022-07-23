@@ -1,4 +1,5 @@
 #include "util.h"
+#include <stdio.h>
 
 unsigned int compare_vector(uint8_t * v1, uint8_t * v2, unsigned int len)
 {
@@ -6,6 +7,7 @@ unsigned int compare_vector(uint8_t * v1, uint8_t * v2, unsigned int len)
 
 	for (i = 0; i < len ; ++i)
 	{
+		// printf("%02X %02X\n", v1[i], v2[i]);
 		if (v1[i] != v2[i])
 			return 0;
 	}
