@@ -4,7 +4,7 @@
 # compile C with /Library/Developer/CommandLineTools/usr/bin/cc
 C_DEFINES = -DCRYPTO_MODULE_EXPORTS
 
-C_INCLUDES = -I/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include -I/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/crypto
+C_INCLUDES = -I/Users/kimkj/Desktop/Practice/Crypto_C/include -I/Users/kimkj/Desktop/Practice/Crypto_C/include/crypto
 
 C_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
 

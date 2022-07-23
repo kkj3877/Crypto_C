@@ -17,9 +17,9 @@ void block_cipher(ORDER order, target_data * data)
     PROCESS process = order & 0x0F000000;
     MODE    mode    = order & 0x00F00000;
 
-                    printf("crypto  : %08X\n", crypto);
-                    printf("process : %08X\n", process);
-                    printf("mode    : %08X\n", mode);
+                    // printf("crypto  : %08X\n", crypto);
+                    // printf("process : %08X\n", process);
+                    // printf("mode    : %08X\n", mode);
 
     switch (crypto)
     {
@@ -45,7 +45,7 @@ void block_cipher(ORDER order, target_data * data)
                         operate_CFB(ARIA_encrypt, data, DECRYPT);
                     break;
                 case OFB:
-                    operate_OFB(ARIA_encrypt, data, ENCRYPT);
+                    operate_OFB(ARIA_encrypt, data);
                     break;
                 case CTR:
                     operate_CTR(ARIA_encrypt, data);
@@ -61,7 +61,24 @@ void block_cipher(ORDER order, target_data * data)
                     else
                         operate_ECB(LEA_decrypt, data);
                     break;
-                    
+                case CBC:
+                    if (process == ENCRYPT)
+                        operate_CBC(LEA_encrypt, data, ENCRYPT);
+                    else
+                        operate_CBC(LEA_decrypt, data, DECRYPT);
+                    break;
+                case CFB:
+                    if (process == ENCRYPT)
+                        operate_CFB(LEA_encrypt, data, ENCRYPT);
+                    else
+                        operate_CFB(LEA_encrypt, data, DECRYPT);
+                    break;
+                case OFB:
+                    operate_OFB(LEA_encrypt, data);
+                    break;
+                case CTR:
+                    operate_CTR(LEA_encrypt, data);
+                    break;
             }
             break;
     }
@@ -89,7 +106,7 @@ void operate_ECB(CRYPTO_SYSTEM crypto, target_data * data)
                         printf("    input text : ");
                         for (j = 0; j < ARIA_BLOCK_SIZE; ++j) printf("%02X ", input[j]);
                         printf("\n");
-
+        
         crypto(output, input, key, key_len);
 
                         printf("processed text : ");
@@ -130,6 +147,7 @@ void operate_CBC(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
                         printf("    plain text : ");
                         for (j = 0; j < BLOCK_SIZE; ++j) printf("%02X ", input[j]);
                         printf("\n");
+
             block_XOR(X, input, iv);
             crypto(output, X, key, key_len);
 
@@ -152,6 +170,7 @@ void operate_CBC(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
                         printf("   cipher text : ");
                         for (j = 0; j < BLOCK_SIZE; ++j) printf("%02X ", input[j]);
                         printf("\n");
+
             crypto(X, input, key, key_len);
             block_XOR(output, X, iv);
 
@@ -238,7 +257,7 @@ void operate_CFB(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
     }
 }
 
-void operate_OFB(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
+void operate_OFB(CRYPTO_SYSTEM crypto, target_data * data)
 {
     uint8_t * input;
     uint8_t X[BLOCK_SIZE];
@@ -261,8 +280,6 @@ void operate_OFB(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
     
     block_num = data->input_len / BLOCK_SIZE;
 
-    // if (enc_dec == ENCRYPT)
-    // {
     memcpy(X, iv, BLOCK_SIZE);
                     
     for (i = 0; i < block_num; ++i)
@@ -282,29 +299,6 @@ void operate_OFB(CRYPTO_SYSTEM crypto, target_data * data, PROCESS enc_dec)
         input += BLOCK_SIZE;
         output += BLOCK_SIZE;
     }
-    // }
-    // else
-    // {
-    //     memcpy(X, iv, BLOCK_SIZE);
-        
-    //     for (i = 0; i < block_num; ++i)
-    //     {
-    //                     printf("   cipher text : ");
-    //                     for (j = 0; j < BLOCK_SIZE; ++j) printf("%02X ", input[j]);
-    //                     printf("\n");
-
-    //         crypto(Y, X, key, key_len);
-    //         memcpy(X, input, BLOCK_SIZE);
-    //         block_XOR(output, Y, X);
-
-    //                     printf("decrypted text : ");
-    //                     for (j = 0; j < BLOCK_SIZE; ++j) printf("%02X ", output[j]);
-    //                     printf("\n\n");
-
-    //         input += BLOCK_SIZE;
-    //         output += BLOCK_SIZE;
-    //     }
-    // }
 }
 
 void operate_CTR(CRYPTO_SYSTEM crypto, target_data * data)
@@ -323,7 +317,7 @@ void operate_CTR(CRYPTO_SYSTEM crypto, target_data * data)
     output = data->output;
     key = data->key;
     key_len = data->key_len;
-    memset(ctr, 0x00, BLOCK_SIZE);
+    memcpy(ctr, data->iv, BLOCK_SIZE);
     
     block_num = data->input_len / BLOCK_SIZE;
     

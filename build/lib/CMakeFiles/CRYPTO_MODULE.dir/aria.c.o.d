@@ -1,5 +1,5 @@
 lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o: \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/aria.c \
+  /Users/kimkj/Desktop/Practice/Crypto_C/lib/aria.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h \
@@ -42,7 +42,7 @@ lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -72,8 +72,8 @@ lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_common.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_string.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/../include/crypto/aria.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/crypto/./../block.h \
+  /Users/kimkj/Desktop/Practice/Crypto_C/lib/../include/crypto/aria.h \
+  /Users/kimkj/Desktop/Practice/Crypto_C/include/crypto/./../block.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h \

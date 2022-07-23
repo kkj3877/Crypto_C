@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.23.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C
+CMAKE_SOURCE_DIR = /Users/kimkj/Desktop/Practice/Crypto_C
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build
+CMAKE_BINARY_DIR = /Users/kimkj/Desktop/Practice/Crypto_C/build
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/CRYPTO_MODULE.dir/depend.make
@@ -72,72 +72,72 @@ include lib/CMakeFiles/CRYPTO_MODULE.dir/flags.make
 lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/flags.make
 lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o: ../lib/lea.c
 lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/lea.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/lea.c.o -c /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/lea.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkj/Desktop/Practice/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o"
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/lea.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/lea.c.o -c /Users/kimkj/Desktop/Practice/Crypto_C/lib/lea.c
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CRYPTO_MODULE.dir/lea.c.i"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/lea.c > CMakeFiles/CRYPTO_MODULE.dir/lea.c.i
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkj/Desktop/Practice/Crypto_C/lib/lea.c > CMakeFiles/CRYPTO_MODULE.dir/lea.c.i
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/lea.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CRYPTO_MODULE.dir/lea.c.s"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/lea.c -o CMakeFiles/CRYPTO_MODULE.dir/lea.c.s
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkj/Desktop/Practice/Crypto_C/lib/lea.c -o CMakeFiles/CRYPTO_MODULE.dir/lea.c.s
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/flags.make
 lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o: ../lib/aria.c
 lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/aria.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/aria.c.o -c /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/aria.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkj/Desktop/Practice/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o"
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/aria.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/aria.c.o -c /Users/kimkj/Desktop/Practice/Crypto_C/lib/aria.c
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CRYPTO_MODULE.dir/aria.c.i"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/aria.c > CMakeFiles/CRYPTO_MODULE.dir/aria.c.i
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkj/Desktop/Practice/Crypto_C/lib/aria.c > CMakeFiles/CRYPTO_MODULE.dir/aria.c.i
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/aria.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CRYPTO_MODULE.dir/aria.c.s"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/aria.c -o CMakeFiles/CRYPTO_MODULE.dir/aria.c.s
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkj/Desktop/Practice/Crypto_C/lib/aria.c -o CMakeFiles/CRYPTO_MODULE.dir/aria.c.s
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/flags.make
 lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o: ../lib/block.c
 lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/block.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/block.c.o -c /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/block.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkj/Desktop/Practice/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o"
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/block.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/block.c.o -c /Users/kimkj/Desktop/Practice/Crypto_C/lib/block.c
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CRYPTO_MODULE.dir/block.c.i"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/block.c > CMakeFiles/CRYPTO_MODULE.dir/block.c.i
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkj/Desktop/Practice/Crypto_C/lib/block.c > CMakeFiles/CRYPTO_MODULE.dir/block.c.i
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/block.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CRYPTO_MODULE.dir/block.c.s"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/block.c -o CMakeFiles/CRYPTO_MODULE.dir/block.c.s
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkj/Desktop/Practice/Crypto_C/lib/block.c -o CMakeFiles/CRYPTO_MODULE.dir/block.c.s
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/flags.make
 lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o: ../lib/util.c
 lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/util.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/util.c.o -c /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkj/Desktop/Practice/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o"
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/util.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/util.c.o -c /Users/kimkj/Desktop/Practice/Crypto_C/lib/util.c
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CRYPTO_MODULE.dir/util.c.i"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/util.c > CMakeFiles/CRYPTO_MODULE.dir/util.c.i
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkj/Desktop/Practice/Crypto_C/lib/util.c > CMakeFiles/CRYPTO_MODULE.dir/util.c.i
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CRYPTO_MODULE.dir/util.c.s"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/util.c -o CMakeFiles/CRYPTO_MODULE.dir/util.c.s
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkj/Desktop/Practice/Crypto_C/lib/util.c -o CMakeFiles/CRYPTO_MODULE.dir/util.c.s
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/flags.make
 lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o: ../lib/test.c
 lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o: lib/CMakeFiles/CRYPTO_MODULE.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/test.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/test.c.o -c /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kimkj/Desktop/Practice/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o"
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o -MF CMakeFiles/CRYPTO_MODULE.dir/test.c.o.d -o CMakeFiles/CRYPTO_MODULE.dir/test.c.o -c /Users/kimkj/Desktop/Practice/Crypto_C/lib/test.c
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CRYPTO_MODULE.dir/test.c.i"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/test.c > CMakeFiles/CRYPTO_MODULE.dir/test.c.i
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kimkj/Desktop/Practice/Crypto_C/lib/test.c > CMakeFiles/CRYPTO_MODULE.dir/test.c.i
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CRYPTO_MODULE.dir/test.c.s"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib/test.c -o CMakeFiles/CRYPTO_MODULE.dir/test.c.s
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kimkj/Desktop/Practice/Crypto_C/lib/test.c -o CMakeFiles/CRYPTO_MODULE.dir/test.c.s
 
 # Object files for target CRYPTO_MODULE
 CRYPTO_MODULE_OBJECTS = \
@@ -157,18 +157,18 @@ lib/libCRYPTO_MODULE.dylib: lib/CMakeFiles/CRYPTO_MODULE.dir/util.c.o
 lib/libCRYPTO_MODULE.dylib: lib/CMakeFiles/CRYPTO_MODULE.dir/test.c.o
 lib/libCRYPTO_MODULE.dylib: lib/CMakeFiles/CRYPTO_MODULE.dir/build.make
 lib/libCRYPTO_MODULE.dylib: lib/CMakeFiles/CRYPTO_MODULE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libCRYPTO_MODULE.dylib"
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CRYPTO_MODULE.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kimkj/Desktop/Practice/Crypto_C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libCRYPTO_MODULE.dylib"
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CRYPTO_MODULE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/CMakeFiles/CRYPTO_MODULE.dir/build: lib/libCRYPTO_MODULE.dylib
 .PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/build
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/clean:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/CRYPTO_MODULE.dir/cmake_clean.cmake
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/CRYPTO_MODULE.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/clean
 
 lib/CMakeFiles/CRYPTO_MODULE.dir/depend:
-	cd /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/lib /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib/CMakeFiles/CRYPTO_MODULE.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kimkj/Desktop/Practice/Crypto_C/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kimkj/Desktop/Practice/Crypto_C /Users/kimkj/Desktop/Practice/Crypto_C/lib /Users/kimkj/Desktop/Practice/Crypto_C/build /Users/kimkj/Desktop/Practice/Crypto_C/build/lib /Users/kimkj/Desktop/Practice/Crypto_C/build/lib/CMakeFiles/CRYPTO_MODULE.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/CRYPTO_MODULE.dir/depend
 

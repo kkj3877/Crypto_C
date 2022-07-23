@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test
+# Install script for directory: /Users/kimkj/Desktop/Practice/Crypto_C/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

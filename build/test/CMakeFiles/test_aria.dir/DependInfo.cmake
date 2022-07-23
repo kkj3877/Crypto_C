@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/test_aria.c" "test/CMakeFiles/test_aria.dir/test_aria.c.o" "gcc" "test/CMakeFiles/test_aria.dir/test_aria.c.o.d"
+  "/Users/kimkj/Desktop/Practice/Crypto_C/test/test_aria.c" "test/CMakeFiles/test_aria.dir/test_aria.c.o" "gcc" "test/CMakeFiles/test_aria.dir/test_aria.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/build/lib/CMakeFiles/CRYPTO_MODULE.dir/DependInfo.cmake"
+  "/Users/kimkj/Desktop/Practice/Crypto_C/build/lib/CMakeFiles/CRYPTO_MODULE.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

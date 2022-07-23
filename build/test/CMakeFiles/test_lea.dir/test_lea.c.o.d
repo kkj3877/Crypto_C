@@ -1,6 +1,6 @@
 test/CMakeFiles/test_lea.dir/test_lea.c.o: \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/test_lea.c \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/./../include/test.h \
+  /Users/kimkj/Desktop/Practice/Crypto_C/test/test_lea.c \
+  /Users/kimkj/Desktop/Practice/Crypto_C/test/./../include/test.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h \
@@ -43,7 +43,7 @@ test/CMakeFiles/test_lea.dir/test_lea.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -65,7 +65,7 @@ test/CMakeFiles/test_lea.dir/test_lea.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/./block.h \
+  /Users/kimkj/Desktop/Practice/Crypto_C/include/./block.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h \
@@ -75,6 +75,6 @@ test/CMakeFiles/test_lea.dir/test_lea.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/secure/_common.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/./util.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/test/./../include/crypto/lea.h \
-  /Users/kimkyeongjoon/Desktop/Practice/mygit/Crypto_C/include/crypto/./../block.h
+  /Users/kimkj/Desktop/Practice/Crypto_C/include/./util.h \
+  /Users/kimkj/Desktop/Practice/Crypto_C/test/./../include/crypto/lea.h \
+  /Users/kimkj/Desktop/Practice/Crypto_C/include/crypto/./../block.h
